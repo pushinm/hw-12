@@ -1,0 +1,23 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}
+    Пользователи
+{% endblock title %}
+{% block content %}
+    <div style="display:flex; flex-direction:column; gap:10px">
+        <div style="display:flex; flex-direction:raw; gap:8px;">
+            <p>Пользователи мужского пола:</p>
+            {% for i in user_male %}
+                <p>{{i.name}}</p>
+            {% endfor %}
+        </div>
+        <div style="display:flex; flex-direction:raw; gap:8px;">
+            <div style="display:flex; flex-direction:raw; gap:8px;">
+            <p>Пользователи женского пола:</p>
+            {% for i in user_female %}
+                <p>{{i.name}}</p>
+            {% endfor %}
+        </div>
+        </div>
+    </div>
+{% endblock content %}

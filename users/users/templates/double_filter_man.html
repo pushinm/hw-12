@@ -1,0 +1,10 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}
+    Пользователи
+{% endblock title %}
+{% block content %}
+    {% for i in man %}
+        <p>{{ i.name }} - {{ i.age }}</p>
+    {% endfor %}
+{% endblock content %}
